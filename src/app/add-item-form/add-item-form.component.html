@@ -1,0 +1,5 @@
+<form #itemForm = "ngForm" (ngSubmit)="onSubmit(itemForm)"> <!--Adding form-->
+    <input required name="amount" type="number" placeholder="amount" [(ngModel)]="item.amount">  <!--two way bind data-->
+    <input required name="description" type="text" placeholder="Description" [(ngModel)]="item.description"> <!--two way bind data-->
+    <button type="submit" [ngClass] = "{'disabled':!itemForm.valid}" [disabled] = "!itemForm.valid">Add</button> <!--disabled button when form not valid-->
+</form>

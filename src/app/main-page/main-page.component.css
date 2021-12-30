@@ -1,0 +1,60 @@
+.mainProject{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header{
+    height: 100px;
+    width: 100vw;
+    background-color: #2e1111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 900;
+}
+.header h1{
+    letter-spacing: 3px;
+}
+
+.total-budget{
+    background-color: rgb(255 255 255);
+    color: #111;
+    width: 819px;
+    height: 130px;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 4px #c9c5c5;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+hr{
+    width: 100%;
+    color: #fff;
+}
+.add-item-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.add-item-container {
+    width: 680px;
+    height: 60px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}

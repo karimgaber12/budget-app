@@ -1,0 +1,18 @@
+<div class="mainProject">
+<header class="header">
+    <h1>Budget Application</h1>
+</header>
+
+<section class="total-budget">
+    <p [ngClass]="{'green': totalBudget > 0 , 'red' : totalBudget < 0}">{{totalBudget}}</p>
+</section>
+<section class="add-item-section">
+    <div class="add-item-container">
+        <!--(formSubmit)="addItem($event)"::
+        allows us to get the value of the event and pass it
+        to this method-->
+        <app-add-item-form (formSubmit)="addItem($event)"></app-add-item-form>
+    </div>
+  </section>
+</div>
+<app-buget-item-list style="color: #fff;" [budgetItems]="budgetItems" (bDelete)="deleteItem($event)" (update)="updateItem($event)"></app-buget-item-list>

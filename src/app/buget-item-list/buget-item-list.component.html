@@ -1,0 +1,44 @@
+<section class="budget-items-section">
+    <div class="budget-items-container">
+  
+      <div class="income-column income">
+        <h1 class="h1Income">Income</h1>
+        <div class="budget-items">
+          <div *ngFor="let item of budgetItems">
+            <!--*ngIf="item.amount >= 0":
+             only show the item which greater than zero(0)-->
+          <app-budget-item-card
+          *ngIf="item.amount >= 0" 
+          (deleteButton)="delete(item)"
+          [item] = 'item'
+          (cardClick)="onCardClicked(item)"
+          ></app-budget-item-card>
+        </div>
+          <div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="expenses-column expenses">
+
+        <h1 class="h1Income">Expenses</h1>
+
+        <div class="budget-items">
+          <div *ngFor="let item of budgetItems">
+            <app-budget-item-card 
+            *ngIf="item.amount < 0" 
+            (deleteButton)="delete(item)"
+            [item] = 'item'
+            (cardClick)="onCardClicked(item)"
+            ></app-budget-item-card>
+
+          </div>
+            <div>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+
+  </section>
